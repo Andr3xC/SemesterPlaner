@@ -1,32 +1,27 @@
 from props import *
-
+    
 class User:
     pass # Se añade en actualizaciones futuras
 
-class Materia:
-
-    def __init__(self, subject):
-        self.subject = subject
-        self.status = None
-        self.value = self.set_value()
-
-    def set_value(self):
-        if self.subject not in  subjet_list:
-            raise Exception("materia no encontrada")
-
-        for objetive_subject in subjet_list:
-            if self.subject == objetive_subject:
-                self.value = subjet_list[self.subject]
-
-    def get_value(self):
-        return self.value
-
-    def set_status(self, subjet):
-        for 
-
-    def get_status(self, subjet):
+class Subjet:
+    def __init__(self, subjet):
+        self.subjet = subjet
+        self.status = self.SetStatus()
+        self.Fails = 0
+        self.Passed = False
+        
+    #----Get zone----#
+    def setStatus(self, new_status):
+        if self.Passed != new_status:
+            self.status = new_status
+    
+    #----Get zone----#
+    def getStatus(self):
+        return self.status
+    
+    def getFails(self):
+        return self.Fails 
+        
+class Menu:
+    def __init__(self):
         pass
-    
-    
-materia = Materia("AYED")
-print(materia.get_value())
